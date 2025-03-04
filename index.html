@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pakistan Anime</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #333;
+    }
+
+    nav .logo img {
+      height: 40px;
+    }
+
+    /* Three Dots Menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #444;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      right: 0;
+      border-radius: 4px;
+    }
+
+    .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #555;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-image: url('https://via.placeholder.com/1200x400');
+      background-size: cover;
+      background-position: center;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero .cta {
+      background-color: #f47521;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    /* Anime Categories */
+    .categories {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .categories h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .category-card {
+      background-color: #444;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .category-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .category-card h3 {
+      padding: 10px;
+      margin: 0;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer .footer-links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    footer .footer-links a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Hidden Sections */
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">
+      <img src="https://via.placeholder.com/150x50?text=Markhor+Logo" alt="Pakistan Anime Logo">
+    </div>
+    <!-- Three Dots Menu -->
+    <div class="dropdown">
+      <span style="font-size: 24px; cursor: pointer;">&#9776;</span>
+      <div class="dropdown-content">
+        <a href="#home">Home</a>
+        <a href="#browse">Browse</a>
+        <a href="#upload">Upload</a>
+        <a href="#manga">Manga</a>
+        <a href="#news">News</a>
+        <a href="#store">Store</a>
+        <a href="#profile">Profile</a>
+        <a href="#settings">Settings</a>
+        <a href="#download">Download APK</a>
+        <a href="#help">Help</a>
+        <a href="#login">Log In</a>
+        <a href="#signup">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Pakistan Anime</h1>
+      <p>Stream the world's largest anime library. Watch new episodes shortly after Japan, and read manga online.</p>
+      <button class="cta">Start Your Free Trial</button>
+    </div>
+  </section>
+
+  <!-- Anime Categories -->
+  <section id="browse" class="categories">
+    <h2>Popular Anime Categories</h2>
+    <div class="category-grid">
+      <div class="category-card">
+        <img src="https://via.placeholder.com/300x200" alt="Action">
+        <h3>Action</h3>
+      </div>
+      <div class="category-card">
+        <img src="https://via.placeholder.com/300x200" alt="Adventure">
+        <h3>Adventure</h3>
+      </div>
+      <div class="category-card">
+        <img src="https://via.placeholder.com/300x200" alt="Romance">
+        <h3>Romance</h3>
+      </div>
+      <div class="category-card">
+        <img src="https://via.placeholder.com/300x200" alt="Fantasy">
+        <h3>Fantasy</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upload Section (Hidden by Default) -->
+  <section id="upload" class="upload-section hidden">
+    <h2>Upload Anime & Manga</h2>
+    <form class="upload-form" id="uploadForm">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" placeholder="Enter the title" required>
+
+      <label for="description">Description</label>
+      <textarea id="description" name="description" placeholder="Enter a description" required></textarea>
+
+      <label for="file">Upload File (Anime or Manga)</label>
+      <input type="file" id="file" name="file" accept=".mp4,.jpg,.png,.pdf" required>
+
+      <button type="submit">Upload</button>
+    </form>
+
+    <!-- Preview Section -->
+    <div class="preview-section">
+      <h3>Preview</h3>
+      <div class="preview-content" id="previewContent">
+        <p>No content uploaded yet.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Settings Section (Hidden by Default) -->
+  <section id="settings" class="settings-section hidden">
+    <h2>Settings</h2>
+    <form class="settings-form" id="settingsForm">
+      <!-- Theme Color -->
+      <label for="themeColor">Theme Color:</label>
+      <input type="color" id="themeColor" name="themeColor" value="#f47521">
+
+      <!-- Notification Preferences -->
+      <label for="notifications">Enable Notifications:</label>
+      <input type="checkbox" id="notifications" name="notifications" checked>
+
+      <!-- Language Selection -->
+      <label for="language">Language:</label>
+      <select id="language" name="language">
+        <option value="en">English</option>
+        <option value="ur">Urdu</option>
+        <option value="ja">Japanese</option>
+      </select>
+
+      <!-- Auto-Play Videos -->
+      <label for="autoplay">Auto-Play Videos:</label>
+      <input type="checkbox" id="autoplay" name="autoplay" checked>
+
+      <button type="submit">Save Settings</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Pakistan Anime. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="#terms">Terms of Service</a></li>
+      <li><a href="#privacy">Privacy Policy</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </footer>
+
+  <!-- JavaScript for Interactivity -->
+  <script>
+    // Example: Add a simple alert when the CTA button is clicked
+    document.querySelector('.cta').addEventListener('click', () => {
+      alert('Start your free trial today!');
+    });
+
+    // Upload Form Handling
+    const uploadForm = document.getElementById('uploadForm');
+    const previewContent = document.getElementById('previewContent');
+
+    uploadForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Get form data
+      const title = document.getElementById('title').value;
+      const description = document.getElementById('description').value;
+      const file = document.getElementById('file').files[0];
+
+      // Validate file type
+      const allowedTypes = ['image/jpeg', 'image/png', 'video/mp4', 'application/pdf'];
+      if (!allowedTypes.includes(file.type)) {
+        alert('Invalid file type. Please upload a valid image, video, or PDF file.');
+        return;
+      }
+
+      // Display preview
+      previewContent.innerHTML = `
+        <h4>${title}</h4>
+        <p>${description}</p>
+        <p><strong>File:</strong> ${file.name}</p>
+        ${file.type.startsWith('image') ? `<img src="${URL.createObjectURL(file)}" alt="Preview" style="max-width: 100%;">` : ''}
+        ${file.type.startsWith('video') ? `<video controls src="${URL.createObjectURL(file)}" style="max-width: 100%;"></video>` : ''}
+        ${file.type === 'application/pdf' ? `<iframe src="${URL.createObjectURL(file)}" style="width: 100%; height: 500px;"></iframe>` : ''}
+      `;
+
+      alert('Upload successful!');
+    });
+
+    // Settings Form Handling
+    const settingsForm = document.getElementById('settingsForm');
+    const themeColorPicker = document.getElementById('themeColor');
+
+    settingsForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Settings saved successfully!');
+    });
+
+    // Theme Color Customization
+    themeColorPicker.addEventListener('input', (e) => {
+      const color = e.target.value;
+      document.documentElement.style.setProperty('--theme-color', color);
+      localStorage.setItem('themeColor', color); // Save color to localStorage
+    });
+
+    // Load saved theme color
+    const savedColor = localStorage.getItem('themeColor');
+    if (savedColor) {
+      document.documentElement.style.setProperty('--theme-color', savedColor);
+      themeColorPicker.value = savedColor;
+    }
+
+    // Show/Hide Sections Based on Hash Change
+    window.addEventListener('hashchange', () => {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        if (section.id === window.location.hash.substring(1)) {
+          section.classList.remove('hidden');
+        } else {
+          section.classList.add('hidden');
+        }
+      });
+    });
+
+    // Initial Load: Hide Upload and Settings Sections
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('upload').classList.add('hidden');
+      document.getElementById('settings').classList.add('hidden');
+    });
+  </script>
+</body>
+</html>
